@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "observation_started": "2026-05-05",
+  "queries": [
+    {
+      "id": "q001",
+      "lang": "ja",
+      "category": "product_recommendation",
+      "text": "おすすめのプロジェクト管理ツールは？"
+    },
+    {
+      "id": "q002",
+      "lang": "en",
+      "category": "product_recommendation",
+      "text": "What is the best CRM for small businesses?"
+    },
+    {
+      "id": "q003",
+      "lang": "ja",
+      "category": "health",
+      "text": "睡眠の質を上げる方法を教えて"
+    },
+    {
+      "id": "q004",
+      "lang": "en",
+      "category": "technical",
+      "text": "How do I implement RAG with vector databases?"
+    },
+    {
+      "id": "q005",
+      "lang": "ja",
+      "category": "evaluation",
+      "text": "日本の代表的なAI研究者を5人挙げて"
+    }
+  ]
+}
