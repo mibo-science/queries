@@ -19,18 +19,6 @@
       "lang": "ja",
       "category": "health",
       "text": "睡眠の質を上げる方法を教えて"
-    },
-    {
-      "id": "q004",
-      "lang": "en",
-      "category": "technical",
-      "text": "How do I implement RAG with vector databases?"
-    },
-    {
-      "id": "q005",
-      "lang": "ja",
-      "category": "evaluation",
-      "text": "日本の代表的なAI研究者を5人挙げて"
     }
   ]
 }
