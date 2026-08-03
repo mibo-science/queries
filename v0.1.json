@@ -1,24 +1,121 @@
 {
-  "version": "0.1.0",
-  "observation_started": "2026-05-05",
+  "schema": "mibo.pilot.query-set",
+  "schema_version": "1.0",
+  "repository": "mibo-research-pilot/queries",
+  "github_organization": "mibo-research-pilot",
+  "observatory": "MIBO",
+  "instrument_scope": "MIBO Pilot",
+  "version": "0.1.1",
+  "status": "pilot_operational_snapshot",
+  "semantic_status": "unchanged",
+  "effective_from": "2026-05-19",
+  "effective_through": "2026-08-31",
+  "collection_mode": "api",
+  "api_collection_since": "2026-05-05",
+  "verified_through_day": 13,
+  "verified_through_date": "2026-07-28",
+  "verified_cumulative_observations": 244,
+  "query_count": 5,
+  "query_text_encoding": "UTF-8",
+  "hash_method": {
+    "algorithm": "SHA-256",
+    "per_query": "SHA-256 of the exact UTF-8 query text",
+    "instrument": "SHA-256 of UTF-8 concatenation in query order using id<TAB>language<TAB>category<TAB>text<LF>"
+  },
+  "instrument_content_sha256": "8463f51cf40bd0e2b7186569cdb84e26085ad16f6c62e7035c1a1c59311cdd35",
+  "observation_schedule": [
+    {
+      "days": "1-2",
+      "date_range": "2026-05-05 to 2026-05-12",
+      "active_query_ids": [
+        "q001",
+        "q002",
+        "q003"
+      ],
+      "queries_per_system": 3
+    },
+    {
+      "days": "3-13",
+      "date_range": "2026-05-19 to 2026-07-28",
+      "active_query_ids": [
+        "q001",
+        "q002",
+        "q003",
+        "q004",
+        "q005"
+      ],
+      "queries_per_system": 5
+    }
+  ],
+  "notes": [
+    "q001-q003 were first used on Day 1.",
+    "q004-q005 were added on Day 3.",
+    "All Pilot observations have been conducted through APIs from Day 1.",
+    "The exact query wording remained unchanged through the verified boundary.",
+    "Verified-through fields are evidentiary metadata and do not change the semantic query-set version.",
+    "This Pilot set is distinct from the MIBO Core v1.0 Fixed Query Instrument.",
+    "Pilot query IDs must not be silently mapped to MIBO Core v1.0 item IDs."
+  ],
   "queries": [
     {
       "id": "q001",
-      "lang": "ja",
+      "language": "ja",
       "category": "product_recommendation",
-      "text": "おすすめのプロジェクト管理ツールは？"
+      "text": "おすすめのプロジェクト管理ツールは？",
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05",
+      "exact_text_sha256": "da869630aef1a074e63d69f3da3e99d4149a03dfbc6a92c208bf84b3143634db",
+      "exact_text_frozen": true,
+      "retired": false,
+      "retirement_date": null
     },
     {
       "id": "q002",
-      "lang": "en",
+      "language": "en",
       "category": "product_recommendation",
-      "text": "What is the best CRM for small businesses?"
+      "text": "What is the best CRM for small businesses?",
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05",
+      "exact_text_sha256": "772657a3e31b679d1a5d7623103bcfd8a84323174441f87889cafd511305d2bc",
+      "exact_text_frozen": true,
+      "retired": false,
+      "retirement_date": null
     },
     {
       "id": "q003",
-      "lang": "ja",
-      "category": "health",
-      "text": "睡眠の質を上げる方法を教えて"
+      "language": "ja",
+      "category": "health_information",
+      "text": "睡眠の質を上げる方法を教えて",
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05",
+      "exact_text_sha256": "07fcfde59aaa98cd0725a47aab80922462b51fc8af859abf95ff1edc439aa156",
+      "exact_text_frozen": true,
+      "retired": false,
+      "retirement_date": null
+    },
+    {
+      "id": "q004",
+      "language": "en",
+      "category": "technical_implementation",
+      "text": "How do I implement RAG with a vector database?",
+      "first_used_day": 3,
+      "first_used_date": "2026-05-19",
+      "exact_text_sha256": "d3c76813942bf6ad31b89a2c0bcfcd826dc641045e45defa19dacf8f5e760927",
+      "exact_text_frozen": true,
+      "retired": false,
+      "retirement_date": null
+    },
+    {
+      "id": "q005",
+      "language": "ja",
+      "category": "people_named_entities",
+      "text": "日本の代表的なAI研究者を5人挙げて",
+      "first_used_day": 3,
+      "first_used_date": "2026-05-19",
+      "exact_text_sha256": "59ad53beaf62d2cce12e58793476fe03155717c9278bc3e3bccd8322d0e4a86d",
+      "exact_text_frozen": true,
+      "retired": false,
+      "retirement_date": null
     }
   ]
 }
