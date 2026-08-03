@@ -1,0 +1,26 @@
+{
+  "algorithm": "SHA-256",
+  "instrument_content_sha256": "8463f51cf40bd0e2b7186569cdb84e26085ad16f6c62e7035c1a1c59311cdd35",
+  "queries": {
+    "q001": {
+      "text": "おすすめのプロジェクト管理ツールは？",
+      "exact_text_sha256": "da869630aef1a074e63d69f3da3e99d4149a03dfbc6a92c208bf84b3143634db"
+    },
+    "q002": {
+      "text": "What is the best CRM for small businesses?",
+      "exact_text_sha256": "772657a3e31b679d1a5d7623103bcfd8a84323174441f87889cafd511305d2bc"
+    },
+    "q003": {
+      "text": "睡眠の質を上げる方法を教えて",
+      "exact_text_sha256": "07fcfde59aaa98cd0725a47aab80922462b51fc8af859abf95ff1edc439aa156"
+    },
+    "q004": {
+      "text": "How do I implement RAG with a vector database?",
+      "exact_text_sha256": "d3c76813942bf6ad31b89a2c0bcfcd826dc641045e45defa19dacf8f5e760927"
+    },
+    "q005": {
+      "text": "日本の代表的なAI研究者を5人挙げて",
+      "exact_text_sha256": "59ad53beaf62d2cce12e58793476fe03155717c9278bc3e3bccd8322d0e4a86d"
+    }
+  }
+}
