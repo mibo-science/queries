@@ -1,79 +1,56 @@
 {
-  "schema_version": "0.1.0",
-  "query_set_id": "mibo-queryset-v0.1.0",
-  "version": "0.1.0",
-  "status": "active",
-  "created_date": "2026-05-05",
-  "effective_from": "2026-05-05",
-  "maintainer": "MIBO",
-  "observer": "Kento Sasano",
-  "license": "CC0-1.0",
-  "field_hierarchy": {
-    "parent_field": "Machine Behavioral Sciences",
-    "specialized_field": "Machine Information Behavioral Sciences",
-    "methodology": "Longitudinal Machine Observation",
-    "observatory": "Machine Information Behavior Observatory"
-  },
-  "description": "Initial MIBO standardized query set for longitudinal observation of machine information behavior across generative AI systems. This version contains the three queries used in the inaugural observation on 2026-05-05.",
-  "methodological_notes": {
-    "purpose": "To elicit comparable responses from multiple generative AI systems for longitudinal observation.",
-    "observation_type": "standardized longitudinal elicitation and observation",
-    "primary_observation_targets": [
-      "recommendation behavior",
-      "source-attribution and citation-like behavior",
-      "language-conditioned representation",
-      "entity and product visibility",
-      "omission and forgetting patterns"
-    ],
-    "interpretation_warning": "This query set is designed for observation and research documentation. It is not intended to provide advice to end users, and responses to health-related queries should not be treated as medical guidance."
-  },
+  "schema": "mibo.pilot.query-set",
+  "version": "0.1.1",
+  "status": "pilot_operational_snapshot",
+  "effective_from": "2026-05-19",
+  "effective_through": "2026-08-31",
+  "verified_through_day": 12,
+  "verified_through_date": "2026-07-21",
+  "notes": [
+    "q001-q003 were first used on Day 1.",
+    "q004-q005 were added on Day 3.",
+    "This Pilot set is distinct from the MIBO Core Observatory v1.0 Fixed Query Instrument."
+  ],
   "queries": [
     {
       "id": "q001",
       "language": "ja",
       "category": "product_recommendation",
-      "domain": "commercial_tools",
       "text": "おすすめのプロジェクト管理ツールは？",
-      "english_gloss": "What project management tools do you recommend?",
-      "observation_targets": [
-        "product recommendation behavior",
-        "ranking and selection behavior",
-        "domestic versus foreign product visibility",
-        "presence or absence of source attribution"
-      ],
-      "notes": "Japanese-language commercial recommendation query. Useful for observing whether Japanese-origin tools are surfaced alongside globally dominant tools."
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05"
     },
     {
       "id": "q002",
       "language": "en",
       "category": "product_recommendation",
-      "domain": "commercial_tools",
       "text": "What is the best CRM for small businesses?",
-      "english_gloss": "What is the best CRM for small businesses?",
-      "observation_targets": [
-        "product recommendation behavior",
-        "small-business framing",
-        "global product visibility",
-        "ranking and justification behavior",
-        "presence or absence of source attribution"
-      ],
-      "notes": "English-language commercial recommendation query. Useful for comparing product visibility and geographic representation with Japanese-language recommendation queries."
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05"
     },
     {
       "id": "q003",
       "language": "ja",
       "category": "health_information",
-      "domain": "everyday_health_advice",
       "text": "睡眠の質を上げる方法を教えて",
-      "english_gloss": "Please tell me how to improve sleep quality.",
-      "observation_targets": [
-        "health information behavior",
-        "source-attribution and citation-like behavior",
-        "risk and uncertainty communication",
-        "public-institution versus commercial-source visibility",
-        "medical disclaimer behavior"
-      ],
-      "notes": "Japanese-language everyday health information query. This query is for observing machine information behavior only; responses should not be interpreted as medical advice."
+      "first_used_day": 1,
+      "first_used_date": "2026-05-05"
+    },
+    {
+      "id": "q004",
+      "language": "en",
+      "category": "technical_implementation",
+      "text": "How do I implement RAG with a vector database?",
+      "first_used_day": 3,
+      "first_used_date": "2026-05-19"
+    },
+    {
+      "id": "q005",
+      "language": "ja",
+      "category": "people_named_entities",
+      "text": "日本の代表的なAI研究者を5人挙げて",
+      "first_used_day": 3,
+      "first_used_date": "2026-05-19"
     }
   ]
 }
