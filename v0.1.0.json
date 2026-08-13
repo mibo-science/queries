@@ -1,121 +1,79 @@
 {
-  "schema": "mibo.pilot.query-set",
-  "schema_version": "1.0",
-  "repository": "mibo-research-pilot/queries",
-  "github_organization": "mibo-research-pilot",
-  "observatory": "MIBO",
-  "instrument_scope": "MIBO Pilot",
-  "version": "0.1.1",
-  "status": "pilot_operational_snapshot",
-  "semantic_status": "unchanged",
-  "effective_from": "2026-05-19",
-  "effective_through": "2026-08-31",
-  "collection_mode": "api",
-  "api_collection_since": "2026-05-05",
-  "verified_through_day": 13,
-  "verified_through_date": "2026-07-28",
-  "verified_cumulative_observations": 244,
-  "query_count": 5,
-  "query_text_encoding": "UTF-8",
-  "hash_method": {
-    "algorithm": "SHA-256",
-    "per_query": "SHA-256 of the exact UTF-8 query text",
-    "instrument": "SHA-256 of UTF-8 concatenation in query order using id<TAB>language<TAB>category<TAB>text<LF>"
+  "schema_version": "0.1.0",
+  "query_set_id": "mibo-queryset-v0.1.0",
+  "version": "0.1.0",
+  "status": "active",
+  "created_date": "2026-05-05",
+  "effective_from": "2026-05-05",
+  "maintainer": "MIBO",
+  "observer": "Kento Sasano",
+  "license": "CC0-1.0",
+  "field_hierarchy": {
+    "parent_field": "Machine Behavioral Sciences",
+    "specialized_field": "Machine Information Behavioral Sciences",
+    "methodology": "Longitudinal Machine Observation",
+    "observatory": "Machine Information Behavior Observatory"
   },
-  "instrument_content_sha256": "8463f51cf40bd0e2b7186569cdb84e26085ad16f6c62e7035c1a1c59311cdd35",
-  "observation_schedule": [
-    {
-      "days": "1-2",
-      "date_range": "2026-05-05 to 2026-05-12",
-      "active_query_ids": [
-        "q001",
-        "q002",
-        "q003"
-      ],
-      "queries_per_system": 3
-    },
-    {
-      "days": "3-13",
-      "date_range": "2026-05-19 to 2026-07-28",
-      "active_query_ids": [
-        "q001",
-        "q002",
-        "q003",
-        "q004",
-        "q005"
-      ],
-      "queries_per_system": 5
-    }
-  ],
-  "notes": [
-    "q001-q003 were first used on Day 1.",
-    "q004-q005 were added on Day 3.",
-    "All Pilot observations have been conducted through APIs from Day 1.",
-    "The exact query wording remained unchanged through the verified boundary.",
-    "Verified-through fields are evidentiary metadata and do not change the semantic query-set version.",
-    "This Pilot set is distinct from the MIBO Core v1.0 Fixed Query Instrument.",
-    "Pilot query IDs must not be silently mapped to MIBO Core v1.0 item IDs."
-  ],
+  "description": "Initial MIBO standardized query set for longitudinal observation of machine information behavior across generative AI systems. This version contains the three queries used in the inaugural observation on 2026-05-05.",
+  "methodological_notes": {
+    "purpose": "To elicit comparable responses from multiple generative AI systems for longitudinal observation.",
+    "observation_type": "standardized longitudinal elicitation and observation",
+    "primary_observation_targets": [
+      "recommendation behavior",
+      "source-attribution and citation-like behavior",
+      "language-conditioned representation",
+      "entity and product visibility",
+      "omission and forgetting patterns"
+    ],
+    "interpretation_warning": "This query set is designed for observation and research documentation. It is not intended to provide advice to end users, and responses to health-related queries should not be treated as medical guidance."
+  },
   "queries": [
     {
       "id": "q001",
       "language": "ja",
       "category": "product_recommendation",
+      "domain": "commercial_tools",
       "text": "おすすめのプロジェクト管理ツールは？",
-      "first_used_day": 1,
-      "first_used_date": "2026-05-05",
-      "exact_text_sha256": "da869630aef1a074e63d69f3da3e99d4149a03dfbc6a92c208bf84b3143634db",
-      "exact_text_frozen": true,
-      "retired": false,
-      "retirement_date": null
+      "english_gloss": "What project management tools do you recommend?",
+      "observation_targets": [
+        "product recommendation behavior",
+        "ranking and selection behavior",
+        "domestic versus foreign product visibility",
+        "presence or absence of source attribution"
+      ],
+      "notes": "Japanese-language commercial recommendation query. Useful for observing whether Japanese-origin tools are surfaced alongside globally dominant tools."
     },
     {
       "id": "q002",
       "language": "en",
       "category": "product_recommendation",
+      "domain": "commercial_tools",
       "text": "What is the best CRM for small businesses?",
-      "first_used_day": 1,
-      "first_used_date": "2026-05-05",
-      "exact_text_sha256": "772657a3e31b679d1a5d7623103bcfd8a84323174441f87889cafd511305d2bc",
-      "exact_text_frozen": true,
-      "retired": false,
-      "retirement_date": null
+      "english_gloss": "What is the best CRM for small businesses?",
+      "observation_targets": [
+        "product recommendation behavior",
+        "small-business framing",
+        "global product visibility",
+        "ranking and justification behavior",
+        "presence or absence of source attribution"
+      ],
+      "notes": "English-language commercial recommendation query. Useful for comparing product visibility and geographic representation with Japanese-language recommendation queries."
     },
     {
       "id": "q003",
       "language": "ja",
       "category": "health_information",
+      "domain": "everyday_health_advice",
       "text": "睡眠の質を上げる方法を教えて",
-      "first_used_day": 1,
-      "first_used_date": "2026-05-05",
-      "exact_text_sha256": "07fcfde59aaa98cd0725a47aab80922462b51fc8af859abf95ff1edc439aa156",
-      "exact_text_frozen": true,
-      "retired": false,
-      "retirement_date": null
-    },
-    {
-      "id": "q004",
-      "language": "en",
-      "category": "technical_implementation",
-      "text": "How do I implement RAG with a vector database?",
-      "first_used_day": 3,
-      "first_used_date": "2026-05-19",
-      "exact_text_sha256": "d3c76813942bf6ad31b89a2c0bcfcd826dc641045e45defa19dacf8f5e760927",
-      "exact_text_frozen": true,
-      "retired": false,
-      "retirement_date": null
-    },
-    {
-      "id": "q005",
-      "language": "ja",
-      "category": "people_named_entities",
-      "text": "日本の代表的なAI研究者を5人挙げて",
-      "first_used_day": 3,
-      "first_used_date": "2026-05-19",
-      "exact_text_sha256": "59ad53beaf62d2cce12e58793476fe03155717c9278bc3e3bccd8322d0e4a86d",
-      "exact_text_frozen": true,
-      "retired": false,
-      "retirement_date": null
+      "english_gloss": "Please tell me how to improve sleep quality.",
+      "observation_targets": [
+        "health information behavior",
+        "source-attribution and citation-like behavior",
+        "risk and uncertainty communication",
+        "public-institution versus commercial-source visibility",
+        "medical disclaimer behavior"
+      ],
+      "notes": "Japanese-language everyday health information query. This query is for observing machine information behavior only; responses should not be interpreted as medical advice."
     }
   ]
 }

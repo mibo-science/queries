@@ -1,5 +1,7 @@
 {
   "algorithm": "SHA-256",
+  "query_set_version": "0.1.1",
+  "applies_to_file": "v0.1.1.json",
   "instrument_content_sha256": "8463f51cf40bd0e2b7186569cdb84e26085ad16f6c62e7035c1a1c59311cdd35",
   "queries": {
     "q001": {

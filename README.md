@@ -3,16 +3,16 @@
 **Repository:** `mibo-research-pilot/queries`  
 **Official GitHub organization:** `mibo-research-pilot`  
 **Collection surface:** API-based from Day 1 — 2026-05-05  
-**Current verified Pilot boundary:** Day 13 — 2026-07-28  
-**Verified cumulative observations:** 244
+**Paper B evidence freeze:** Day 13 — 2026-07-28 — 244 included observations<br>
+**Pilot phase:** continued after the Paper B freeze and before 2026-09-01
 
-Versioned standardized query instruments for the **Machine Information Behavior Observatory — MIBO**.
+Versioned standardized query instruments for **MIBO — Machine Information Behavioral Observatory**.
 
 ---
 
 ## Repository role
 
-This repository preserves the exact query instruments used in MIBO observations.
+This repository is the historical, citation-ready record of the query instrument used in the MIBO Pilot.
 
 Its functions are to:
 
@@ -22,7 +22,7 @@ Its functions are to:
 - record first-use and retirement boundaries;
 - preserve language and category labels;
 - provide cryptographic hashes for integrity checking;
-- prevent silent remapping between the MIBO Pilot and MIBO Core v1.0 instruments.
+- prevent silent remapping of Pilot query IDs to item IDs from a later project phase.
 
 Related repositories:
 
@@ -31,29 +31,17 @@ Related repositories:
 
 ---
 
-## Two distinct instruments
+## Scope and evidence boundary
 
-The repository distinguishes two separate instruments.
+Three boundaries must be kept separate:
 
-### MIBO Pilot query set
+| Boundary | Meaning |
+|---|---|
+| MIBO Pilot operational instrument `v0.1.1` | The five-query operational query set from Day 3 onward |
+| Paper B evidence freeze | Day 13, 2026-07-28, with 244 included observations |
+| Continuing Pilot phase | Pilot observations after Day 13 and before 2026-09-01; these are outside the Paper B evidence freeze, not outside the Pilot |
 
-The MIBO Pilot query set is the developmental instrument used before 1 September 2026.
-
-The current operational snapshot is `v0.1.1`.
-
-### MIBO Core v1.0 Fixed Query Instrument
-
-MIBO Core v1.0 is a separate registered instrument planned to become effective on 1 September 2026.
-
-It is not a patch release of the Pilot set.
-
-```text
-Pilot v0.1.1 ≠ MIBO Core v1.0
-```
-
-Pilot query IDs must not be silently mapped onto MIBO Core v1.0 item IDs.
-
-Any crosswalk must be explicit, versioned, and analytically justified.
+Work beginning on or after 2026-09-01 belongs to the separate MIBO Core project phase and is outside this repository's scope. Pilot query IDs must not be silently mapped to later MIBO Core item IDs.
 
 ---
 
@@ -61,11 +49,11 @@ Any crosswalk must be explicit, versioned, and analytically justified.
 
 | Version | File | Status | Notes |
 |---|---|---|---|
-| v0.1 | `v0.1.json` | Historical | Earliest three-query Pilot set |
-| v0.1.0 | `v0.1.0.json` | Historical | Initial published Pilot snapshot |
-| v0.1.1 | [`v0.1.1.json`](./v0.1.1.json) | Operational Pilot snapshot | Five-query set used from Day 3 and verified through Day 13 |
+| v0.1 | [`v0.1.json`](./v0.1.json) | Historical legacy path | Early three-query snapshot containing q001–q003. Its original internal schema and version wording are preserved exactly, although the filename and internal version convention are not perfectly aligned. |
+| v0.1.0 | [`v0.1.0.json`](./v0.1.0.json) | Initial published Pilot snapshot | Effective from 2026-05-05 and containing q001–q003. |
+| v0.1.1 | [`v0.1.1.json`](./v0.1.1.json) | Pilot operational instrument | Five-query set used from Day 3 onward. Paper B evidence freeze: Day 13 / 2026-07-28 / 244 included observations. |
 
-The historical files remain historical artifacts. Their exact content must not be reconstructed from memory if the original files are unavailable.
+The historical artifacts were recovered byte-for-byte from Git history after later maintenance had overwritten their root copies. See [`AUDIT.md`](./AUDIT.md) for provenance and verification.
 
 ---
 
@@ -84,9 +72,11 @@ The historical files remain historical artifacts. Their exact content must not b
 | Sessions | Active query IDs | Queries per system |
 |---|---|---:|
 | Day 1–Day 2 | q001–q003 | 3 |
-| Day 3–Day 13 | q001–q005 | 5 |
+| Day 3 onward during the Pilot | q001–q005 | 5 |
 
-All observations have been conducted through APIs from Day 1.
+Collection was API-based continuously from Day 1.
+
+Day 13 is the Paper B evidence freeze, not the end of the MIBO Pilot.
 
 The API transport does not change the exact query text.
 
@@ -145,11 +135,13 @@ Examples include:
 | Typographic or whitespace correction with documented semantic equivalence | Patch version |
 | File-format or schema metadata updated | Schema-version or metadata update |
 
-The Day 13 update changes only the verified evidence boundary and integrity metadata. The exact five query texts remain unchanged, so the instrument remains `v0.1.1`.
+The Day 13 Paper B evidence freeze changes only the cited evidence boundary. It does not end the Pilot or change the exact five query texts, so the operational instrument remains `v0.1.1`.
 
 ---
 
 ## Integrity and hashing
+
+[`HASHES.json`](./HASHES.json) applies only to the five-query `v0.1.1.json` instrument. It does not describe either historical three-query artifact.
 
 Each query in `v0.1.1.json` contains:
 
@@ -212,52 +204,18 @@ A query-set version changes only when the stimulus or its operational meaning ch
 
 ---
 
-## MIBO Core v1.0 transition
-
-Recommended repository layout:
-
-```text
-pilot/
-├── v0.1.json
-├── v0.1.0.json
-└── v0.1.1.json
-
-core-v1.0/
-├── fixed-query-instrument-v1.0.md
-├── query-forms.json
-├── hashes.json
-└── crosswalk-from-pilot.json
-```
-
-Until migration is completed, the root `v0.1.1.json` remains the authoritative operational Pilot snapshot.
-
-The crosswalk file must distinguish:
-
-- exact reuse;
-- translation;
-- semantic adaptation;
-- category replacement;
-- retirement;
-- no correspondence.
-
-Pilot results must not be presented as if they were collected with the MIBO Core v1.0 instrument.
-
----
-
 ## Naming rules
 
 Use:
 
-- MIBO;
+- MIBO — Machine Information Behavioral Observatory;
 - MIBO Pilot;
-- MIBO Core v1.0;
-- Fixed Query Instrument;
 - `mibo-research-pilot/queries`.
 
 Avoid:
 
-- adding a redundant “Observatory” suffix to MIBO Core;
-- silently treating Pilot v0.1.1 as MIBO Core v1.0;
+- silently treating Pilot `v0.1.1` as an instrument from a later project phase;
+- describing Day 13 / 244 observations as the end of the entire Pilot;
 - silently changing exact query text;
 - using any repository organization other than `mibo-research-pilot`.
 
