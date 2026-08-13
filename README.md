@@ -49,11 +49,11 @@ Work beginning on or after 2026-09-01 belongs to the separate MIBO Core project 
 
 | Version | File | Status | Notes |
 |---|---|---|---|
-| v0.1 | [`v0.1.json`](./v0.1.json) | Historical path preserved | Earlier file states remain available in Git history; the current bytes match the verified `v0.1.1` snapshot |
-| v0.1.0 | [`v0.1.0.json`](./v0.1.0.json) | Historical path preserved | Earlier file states remain available in Git history; the current bytes match the verified `v0.1.1` snapshot |
-| v0.1.1 | [`v0.1.1.json`](./v0.1.1.json) | Pilot operational instrument | Five-query set used from Day 3 onward; its Paper B evidence freeze is Day 13 |
+| v0.1 | [`v0.1.json`](./v0.1.json) | Historical legacy path | Early three-query snapshot containing q001–q003. Its original internal schema and version wording are preserved exactly, although the filename and internal version convention are not perfectly aligned. |
+| v0.1.0 | [`v0.1.0.json`](./v0.1.0.json) | Initial published Pilot snapshot | Effective from 2026-05-05 and containing q001–q003. |
+| v0.1.1 | [`v0.1.1.json`](./v0.1.1.json) | Pilot operational instrument | Five-query set used from Day 3 onward. Paper B evidence freeze: Day 13 / 2026-07-28 / 244 included observations. |
 
-The byte-identical historical paths are retained intentionally rather than deduplicated or deleted. Their earlier contents and changes remain part of Git history. See [`AUDIT.md`](./AUDIT.md) for provenance and verification.
+The historical artifacts were recovered byte-for-byte from Git history after later maintenance had overwritten their root copies. See [`AUDIT.md`](./AUDIT.md) for provenance and verification.
 
 ---
 
@@ -140,6 +140,8 @@ The Day 13 Paper B evidence freeze changes only the cited evidence boundary. It 
 ---
 
 ## Integrity and hashing
+
+[`HASHES.json`](./HASHES.json) applies only to the five-query `v0.1.1.json` instrument. It does not describe either historical three-query artifact.
 
 Each query in `v0.1.1.json` contains:
 
